@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculatrice</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body style="background-color: #80ddef">
+    <div><h1 style="
+        font-family: Arial, sans-serif;
+        color: rgb(251, 254, 254);
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+      
+     ">calculatrice scientifique</h1></div>
+    <div class="container">
+        <div class="display">
+            <input style="background-color: #859385; color: rgb(8, 8, 8);" id="screen" type="text" placeholder="0" disabled>
+        </div>
+        <div class="btns">
+            <div class="row">
+                <button class="btn" id="ce" onclick="backspc()">⌫</button>
+                <button class="btn" onclick="appendToScreen('(')">(</button>
+                <button class="btn" onclick="appendToScreen(')')">)</button>
+                <button class="btn" onclick="appendToScreen('%')">%</button>
+                <button class="btn" id="ac" onclick="clearScreen()">AC</button>
+            </div>
+
+            <div class="row">
+                <button style="background-color: #859385; color: rgb(109, 223, 193);"class="btn" onclick="calculateSin()">sin</button>
+                <button style="background-color: #859385; color: rgb(109, 223, 193);"class="btn" onclick="getPi()">π</button>
+                <button style="background-color: #859385; color: rgb(109, 223, 193);"class="btn" onclick="calculaSquare()">x²</button>
+                <button class="btn" onclick="appendToScreen('7')">7</button>
+                <button class="btn" onclick="appendToScreen('8')">8</button>
+                <button class="btn" onclick="appendToScreen('9')">9</button>
+                <button class="btn" onclick="appendToScreen('/')">÷</button>
+            </div>
+
+            <div class="row">
+                <button style="background-color: #859385; color: rgb(109, 223, 193);"class="btn" onclick="calculateCos()">cos</button>
+                <button style="background-color: #859385; color: rgb(109, 223, 193);"class="btn" onclick="calculateLog()">log</button>
+                <button style="background-color: #859385; color: rgb(109, 223, 193);"class="btn" onclick="calculateAbsolute()">|x|</button>
+                <button class="btn" onclick="appendToScreen('4')">4</button>
+                <button class="btn" onclick="appendToScreen('5')">5</button>
+                <button class="btn" onclick="appendToScreen('6')">6</button>
+                <button class="btn" onclick="appendToScreen('*')">x</button>
+            </div>
+
+            <div class="row">
+                <button style="background-color: #859385; color: rgb(109, 223, 193);"class="btn" onclick="calculateTan()">tan</button>
+                <button style="background-color: #859385; color: rgb(109, 223, 193);"class="btn" onclick="calculateSqrt()">√</button>
+                <button style="background-color: #859385; color: rgb(109, 223, 193);"class="btn" onclick="calculateCubeRoot()"><span style="position: relative; bottom: .4em; right: .1em;">3</span>√</button>
+                <button class="btn" onclick="appendToScreen('1')">1</button>
+                <button class="btn" onclick="appendToScreen('2')">2</button>
+                <button class="btn" onclick="appendToScreen('3')">3</button>
+                <button class="btn" onclick="appendToScreen('-')">-</button>
+                
+            </div>
+
+            <div class="row">
+                <button style="background-color: #859385; color: rgb(109, 223, 193);"class="btn" onclick="showHistory()">histo..</button>
+                <button style="background-color: #859385; color: rgb(109, 223, 193);"class="btn" onclick="getE()">e</button>
+                <button style="background-color: #859385; color: rgb(109, 223, 193);"class="btn" onclick="calculateFactorial()">X!</button>
+                <button class="btn" onclick="appendToScreen('0')">0</button>
+                <button class="btn" onclick="appendToScreen('.')">.</button>
+                <button class="btn" id="eval" onclick="calculateResult()">=</button>
+                <button class="btn" onclick="appendToScreen('+')">+</button>
+                
+            </div>
+            <div id="history" class="history-container"></div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

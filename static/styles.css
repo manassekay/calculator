@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 450px;
+    margin: 70px auto;
+    background-color: #0e0e0f;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(33, 10, 205, 0.986);
+}
+
+.display {
+    padding: 19px;
+}
+
+.display input {
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    padding: 5px;
+    border: 1px solid #ebf2f4;
+    border-radius: 3px;
+    box-sizing: border-box;
+    text-align: right;
+    
+}
+
+.btns {
+    padding: 15px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.row button {
+    width: calc(20% - 10px);
+    height: 45px;
+    font-size: 16px;
+    margin: 5px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+}
+
+
+#ce, #ac, #eval {
+    background-color: #ff3333;
+    color: #fff;
+}
+
+#ce, #ac, #eval:hover {
+    background-color: #cc0000;
+}
+
+.btn:hover {
+    background-color: #ccc;
+}
+
+#screen {
+    width: calc(100% - 15px);
+    height: 50px;
+}
+
+
+
+.history-container {
+    background-color: #f0f0f0; /* Couleur de fond */
+    padding: 5px; /* Remplissage interne */
+    border-radius: 5px; /* Arrondi des coins */
+    border: 1px solid #ccc; /* Bordure */
+    max-height: 200px; /* Hauteur maximale */
+    overflow-y: auto; /* Défilement vertical si nécessaire */
+}
+
+
+/* Style de base pour le bouton */
+#history-button {
+    background-color: #4CAF50; /* Couleur de fond */
+    color: rgb(48, 119, 70); /* Couleur du texte */
+    padding: 10px 20px; /* Remplissage interne */
+    font-size: 16px; /* Taille de police */
+    border: none; /* Supprime la bordure */
+    border-radius: 5px; /* Arrondi des coins */
+    cursor: pointer; /* Curseur pointeur */
+    margin-bottom: 10px; /* Marge en bas */
+}
+
+/* Style lorsque le bouton est survolé */
+#history-button:hover {
+    background-color: #45a049;
+}
+
+/* Style lorsque le bouton est cliqué */
+#history-button:active {
+    background-color: #3e8e41;
+}
+
